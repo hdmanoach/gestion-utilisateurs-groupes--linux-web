@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Utilisateurs et Groupes</title>
+    
+    <!-- Lien CDN Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Menu de gestion des utilisateurs et groupes Linux</h1>
+        <p>
+            Ce script vous permet de gerer les utilisateurs et les groupes sur le systeme.
+            Si l'execution prend du temps aller dans le terminale pour voir le probleme
+        </p>
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+
+            <div class="col">
+                <form action="{% url 'create_user' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Création d'un utilisateur</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'create_group' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Création d'un groupe</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'add_user_to_group' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Ajouter un utilisateur à un groupe</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'add_user_to_group_sudo' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Ajouter un utilisateur au groupe sudo </button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'remove_user_from_group' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Supprimer un utilisateur d'un groupe</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'delete_group' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Supprimer un groupe</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'delete_user' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Supprimer un utilisateur</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'show_user_groups' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Afficher les groupes d'un utilisateur</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'show_group_users' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Afficher les utilisateurs d'un groupe</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'list_users' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Afficher les utilisateurs du système</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'list_groups' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Lister les groupes du système</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'logged_in_users' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Lister les utilisateurs connectés</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'change_passwd' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100"> Changer de mots de passe</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'passwd_forget' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100">Mots de passe oublie</button>
+                </form>
+            </div>
+            <div class="col">
+                <form action="{% url 'request_log_access' %}" method="get">
+                    <button type="submit" class="btn btn-outline-primary w-100">Journal des comptes creer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap JS (optionnel mais utile pour certains composants) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
