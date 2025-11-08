@@ -1,6 +1,6 @@
-# Gestionnaire d'Utilisateurs Django
+# Gestionnaire d' utilisateurs, des groupes sur linux à travers le web
 
-Le Gestionnaire d'Utilisateurs Django est une application web pour gérer les utilisateurs et les groupes sur un système Linux. Elle fournit une interface simple et intuitive pour les tâches courantes de gestion des utilisateurs et des groupes.
+Le Gestionnaire d'Utilisateurs, des groupes sur linux est une application web pour gérer les utilisateurs et les groupes sur un système Linux. Elle fournit une interface simple et intuitive pour les tâches courantes de gestion des utilisateurs et des groupes.
 
 ## Fonctionnalités
 
